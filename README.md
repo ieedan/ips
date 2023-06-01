@@ -3,7 +3,7 @@ A simple CLI built in rust for setting your static IP Address quickly without us
 
 ### What is ips doing?
 ips is just running commands on your command line as an administrator to change your ip address.
-It will log out the commands it is executing or you can check exactly what it is doing my viewing the source code here https://github.com/ieedan/ips/blob/main/src/main.rs
+It will log out the commands it is executing or you can check exactly what it is doing by viewing the source code here https://github.com/ieedan/ips/blob/main/src/main.rs
 
 ```bash
 C:\WINDOWS\system32>ips 192.168.1.100 # Your command
