@@ -1,7 +1,7 @@
 # ips
 A simple CLI built in rust for setting your static IP Address quickly without using a mouse.
 
-### What is ips doing
+### What is ips doing?
 ips is just running commands on your command line as an administrator to change your ip address.
 It will log out the commands it is executing or you can check exactly what it is doing my viewing the source code 
 
