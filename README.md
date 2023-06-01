@@ -1,6 +1,20 @@
 # ips
 A simple CLI built in rust for setting your static IP Address quickly without using a mouse.
 
+### What is ips doing
+ips is just running commands on your command line as an administrator to change your ip address.
+It will log out the commands it is executing or you can check exactly what it is doing my viewing the source code 
+
+```bash
+C:\WINDOWS\system32>ips 192.168.1.100 # Your command
+netsh interface ip set address name=Ethernet static 192.168.1.100 255.255.0.0 # Sets the IP Address and subnet
+netsh interface set interface Ethernet admin=disable # Disables the interface so it will seamlessly accept the change
+please wait for me to finish up t- 5s # Waits to be ready to enable
+netsh interface set interface Ethernet admin=enable # Re-Enables the interface
+
+C:\WINDOWS\system32>
+```
+
 <a id="using-ips"></a>
 ## Using ips
 
@@ -9,13 +23,13 @@ A simple CLI built in rust for setting your static IP Address quickly without us
 Open a new command prompt or powershell and type in `ips` followed by the ip you want to set.
 
 ```bash
-ips 172.16.160.244
+ips 192.168.1.100
 ```
 
 You can set your subnet here as well by adding it as a second argument. If you choose not to add a subnet the default subnet is 255.255.255.0.
 
 ```bash
-ips 172.16.160.244 255.255.255.0
+ips 192.168.1.100 255.255.255.0
 ```
 
 # Setup
