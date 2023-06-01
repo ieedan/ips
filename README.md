@@ -26,7 +26,7 @@ Open a new command prompt or powershell and type in `ips` followed by the ip you
 ips 192.168.1.100
 ```
 
-You can set your subnet here as well by adding it as a second argument. If you choose not to add a subnet the default subnet is 255.255.255.0.
+You can set your subnet here as well by adding it as a second argument. If you choose not to add a subnet the default subnet is 255.255.0.0
 
 ```bash
 ips 192.168.1.100 255.255.255.0
