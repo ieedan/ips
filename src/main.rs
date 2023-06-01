@@ -2,15 +2,18 @@ use std::env::args;
 use std::process::Command;
 
 fn main() {
-    let mut arguments = args().skip(1);
+    let mut arguments = args().skip(1); // Gets arguments
 
+    // Tries to get the ip address from the arguments
     let ip = arguments
         .next()
         .expect("Please provide an ip address to change to");
 
+    // Checks for the subnet mask
     let optional_subnet_mask = arguments.next();
     let mut subnet_mask = "255.255.0.0".to_owned();
 
+    // Since subnet mask is optional if it is not provided it will keep the default setting 
     if optional_subnet_mask.is_some() {
         subnet_mask = optional_subnet_mask.unwrap();
     }
@@ -22,6 +25,7 @@ fn main() {
         interface_name, ip, subnet_mask
     );
 
+    // Executes command to change IP address and subnet mask
     Command::new("netsh")
         .arg("interface")
         .arg("ip")
@@ -39,6 +43,7 @@ fn main() {
         interface_name
     );
 
+    // Executes command to disable interface
     Command::new("netsh")
         .arg("interface")
         .arg("set")
@@ -50,6 +55,7 @@ fn main() {
 
     println!("please wait for me to finish up t- 5s");
 
+    // Waits 5 seconds so that there is not conflict when re-enabling
     let sleep_duration = std::time::Duration::from_millis(5000);
     std::thread::sleep(sleep_duration);
 
@@ -58,6 +64,7 @@ fn main() {
         interface_name
     );
 
+    // Executes command to enable interface
     Command::new("netsh")
         .arg("interface")
         .arg("set")
