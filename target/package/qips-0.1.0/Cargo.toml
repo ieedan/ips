@@ -17,6 +17,7 @@ description = "qips/ips allows you to set your static ip in the command line sim
 documentation = "https://github.com/ieedan/ips"
 readme = "README.md"
 categories = ["command-line-utilities"]
+license = "MIT"
 repository = "https://github.com/ieedan/ips"
 
 [dependencies]
