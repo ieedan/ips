@@ -1,0 +1,15 @@
+[package]
+name = "qips"
+version = "0.1.0"
+author = "Aidan Bleser"
+edition = "2021"
+description = "qips/ips allows you to set your static ip in the command line simplifying in netsh interface."
+documentation = "https://github.com/ieedan/ips"
+readme = "README.md"
+repository = "https://github.com/ieedan/ips"
+keyword = ["ip","IP Address", "IP address setting"] 
+categories = ["command-line-utilities"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
