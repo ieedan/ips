@@ -32,6 +32,12 @@ You can set your subnet here as well by adding it as a second argument. If you c
 ips 192.168.1.100 255.255.255.0
 ```
 
+### Go back to DHCP (Automatic) Protocol
+
+```bash
+ips clr
+```
+
 # Setup
 **1.** Fork this repo and copy the contents of /target/release
 <br/>
