@@ -9,6 +9,22 @@ fn main() {
         .next()
         .expect("Please provide an ip address to change to");
 
+    let interface_name = "Ethernet";
+
+    if ip == "clr" {
+        Command::new("netsh")
+        .arg("interface")
+        .arg("ip")
+        .arg("set")
+        .arg("address")
+        .arg("\"".to_owned() + interface_name + "\"")
+        .arg("dhcp")
+        .output()
+        .expect("Failed to execute command to go back to DHCP");
+
+        return;
+    }
+
     // Checks for the subnet mask
     let optional_subnet_mask = arguments.next();
     let mut subnet_mask = "255.255.0.0".to_owned();
@@ -17,8 +33,6 @@ fn main() {
     if optional_subnet_mask.is_some() {
         subnet_mask = optional_subnet_mask.unwrap();
     }
-
-    let interface_name = "Ethernet";
 
     println!(
         "netsh interface ip set address name={} static {} {}",
