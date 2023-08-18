@@ -1,9 +1,9 @@
 [package]
-name = "qips"
+name = "ips"
 version = "0.1.0"
 author = "Aidan Bleser"
 edition = "2021"
-description = "qips/ips allows you to set your static ip in the command line simplifying in netsh interface."
+description = "ips/ips allows you to set your static ip in the command line simplifying in netsh interface."
 documentation = "https://github.com/ieedan/ips"
 readme = "README.md"
 repository = "https://github.com/ieedan/ips"
